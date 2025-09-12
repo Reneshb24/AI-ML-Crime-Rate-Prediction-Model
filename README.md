@@ -2,6 +2,8 @@
 # Introduction
 This project implements a machine learning solution to predict the violent crime rate (ViolentCrimesPerPop) in different communities. It utilizes an ensemble of three robust gradient boosting algorithms: LightGBM, XGBoost, and CatBoost. The model follows a clear and systematic data science pipeline, from data preprocessing to final prediction generation, ensuring high accuracy and reliability.
 
+---
+
 # Features
 * Ensemble Modeling: Combines the predictions from three distinct boosting models (LightGBM, XGBoost, CatBoost) to create a more stable and accurate final result.
 
@@ -10,7 +12,7 @@ This project implements a machine learning solution to predict the violent crime
 * Automated Data Preprocessing: Missing values in the dataset are automatically handled and imputed using the median value of each column.
 
 * Efficient Prediction Generation: The script is designed to run and generate a submission.csv file with the final predictions for the test dataset.
-
+---
 # Modules Used
 * numpy: A fundamental package for scientific computing in Python, used for numerical operations and array handling.
 
@@ -27,7 +29,9 @@ This project implements a machine learning solution to predict the violent crime
 * matplotlib and seaborn: Libraries for creating static, animated, and interactive visualizations in Python, often used for data analysis.
 
 * warnings: Used to manage and filter warning messages for cleaner console output.
-
+  
+  ---
+  
 # How It Works
 * Data Loading: The script begins by loading the new_train.csv and new_test_for_participants.csv files into pandas DataFrames.
 
@@ -42,6 +46,8 @@ This project implements a machine learning solution to predict the violent crime
   * XGBoost: 30%
 
   * CatBoost: 20%
+    
+---
 
 # Logic Behind It:
 * The approach of using a weighted average ensemble is based on the principle that combining multiple "weak learners" can create a powerful "strong learner."
@@ -51,6 +57,8 @@ This project implements a machine learning solution to predict the violent crime
 * Why These Weights? The specific weights (50/30/20) are chosen based on the typical performance characteristics of these models. LightGBM is often the fastest and can achieve a very good baseline performance, so it is given the highest weight. XGBoost and CatBoost provide complementary predictive power, helping to refine the final prediction. These weights are a common starting point in many data science competitions and can be further optimized through hyperparameter tuning.
 
 * Importance of Cross-Validation: K-Fold cross-validation is a critical step to ensure that the model generalizes well to unseen data. By training and validating the model on different subsets of the data, we get a much more reliable estimate of its true performance. This prevents the model from simply memorizing the training data (overfitting) and failing when faced with new, real-world examples.
+  
+---
 
 # Dataset Description
 The project utilizes a dataset commonly used for predicting crime rates, containing a rich set of demographic, socioeconomic, and housing-related features for various communities.
@@ -82,11 +90,13 @@ PctImmigRecent: The percentage of recent immigrants in the community.
 
 (and etc refer the file column..)
 
+---
+
 # Setup Instructions
 1. Clone Repository
 To get started, clone the project repository from GitHub:
 
-  git clone [https://github.com/Reneshb24/AI-ML-Crime-Rate-Prediction-Model.git](https://github.com/Reneshb24/AI-ML-Crime-Rate-Prediction-Model.git)
+ git clone [https://github.com/Reneshb24/AI-ML-Crime-Rate-Prediction-Model.git](https://github.com/Reneshb24/AI-ML-Crime-Rate-Prediction-Model.git)
   
   cd AI-ML-Crime-Rate-Prediction-Model
 
